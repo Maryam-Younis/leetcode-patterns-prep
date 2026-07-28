@@ -41,14 +41,18 @@ Space:
     - This is usually portrayed as a function in python. ***Example:***
     
     ***def runningSum(nums):***
+
         ***result = [nums[0]]***
+
         ***for i in range(1, len(nums)):***
+
             ***result.append(result[i-1] + num[i])***
+
         ***return result***
 
-        - We will store the result in this  dynamic list with the first elemenet of nums, num[0], to kick off the list.
-        - we will start at 1, so second element because the first element is already in result, num[0]. Remember in range(x,y) the y is a stoping point and does not run. 
-        - add up the last element in result with the next element in num and append that result to element. 
+    - We will store the result in this  dynamic list with the first elemenet of nums, num[0], to kick off the list.
+    - we will start at 1, so second element because the first element is already in result, num[0]. Remember in range(x,y) the y is a stoping point and does not run. 
+    - add up the last element in result with the next element in num and append that result to element. 
     
 
 - ***Differences/Use Cases***
