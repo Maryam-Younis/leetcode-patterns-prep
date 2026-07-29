@@ -1,0 +1,21 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        retInd = []
+        lookupDict = {}
+
+        for num in range(len(nums)):
+            lookupDict[nums[num]] = num # key, value -> number, index of number 
+
+        for pointer in range (len(nums)):
+            x = nums[pointer]           # pointer going down nums
+            find = (target - x)         # to hit target we find "find'
+            if find in lookupDict:      # if found in dictionary and NOT the same element 
+                if pointer != lookupDict[find]:
+                    retInd = [pointer, lookupDict[find]]  
+                    return retInd
