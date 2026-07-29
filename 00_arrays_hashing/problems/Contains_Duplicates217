@@ -1,0 +1,14 @@
+def containsDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+
+    # one pointer will hold every charecter(starting frin the left),
+    # the second pointer will check all unchecked nums(to the right)
+        setCopy = set()
+        for num in nums:
+            if num in setCopy:
+                return True
+            setCopy.add(num)
+        return False
